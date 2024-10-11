@@ -1,4 +1,6 @@
 package com.appsdeveloperblog.estore.paymentsservice.data;
 
-public class PaymentsRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PaymentsRepository extends JpaRepository<PaymentEntity, String> {
 }
