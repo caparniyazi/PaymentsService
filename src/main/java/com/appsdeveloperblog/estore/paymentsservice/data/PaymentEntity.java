@@ -6,11 +6,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
 @Entity
 @Table(name = "payments")
-public class PaymentEntity {
-    private static final long serialVersionUID = 1L;
+public class PaymentEntity implements Serializable {
+    private static final long serialVersionUID = 2L;
     @Id
     private String paymentId;
 
