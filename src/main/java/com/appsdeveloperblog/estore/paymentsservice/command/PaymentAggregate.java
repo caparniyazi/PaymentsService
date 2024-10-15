@@ -2,6 +2,7 @@ package com.appsdeveloperblog.estore.paymentsservice.command;
 
 import com.appsdeveloperblog.estore.core.commands.ProcessPaymentCommand;
 import com.appsdeveloperblog.estore.core.events.PaymentProcessedEvent;
+import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
 import org.axonframework.modelling.command.AggregateLifecycle;
@@ -18,6 +19,7 @@ public class PaymentAggregate {
     public PaymentAggregate() {
     }
 
+    @CommandHandler
     public PaymentAggregate(ProcessPaymentCommand processPaymentCommand) {
         if
         (processPaymentCommand.getPaymentDetails() == null) {
